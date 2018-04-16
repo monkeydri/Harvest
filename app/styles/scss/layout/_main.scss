@@ -1,0 +1,80 @@
+
+body
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+$navbar-height: 70px;
+
+header
+{
+	height: $navbar-height;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+
+	.logo-link
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+
+		padding-right: 15px;
+		text-decoration: none;
+
+		.picto
+		{
+			padding: 5px;
+			width: $navbar-height;
+			height: $navbar-height;
+
+			img
+			{
+				margin: 5px;
+			}
+		}
+
+		span
+		{
+			font-weight: 900;
+		}
+	}
+
+	#menu
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+
+		a
+		{
+			padding: 0 10px;
+			font-size: 16px;
+			font-weight: 700;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
+
+	#navbar-background
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: $navbar-height;
+		z-index: -1;
+	}
+
+}
+
+section
+{
+	flex-grow: 1;
+}
