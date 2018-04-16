@@ -55,6 +55,7 @@ gulp.task('uglify-error-debugging', function (cb) {
 	pump([
 		gulp.src([
 							'node_modules/jquery/dist/jquery.js',
+							'node_modules/fullpage.js/dist/jquery.fullpage.js',
 							'app/scripts/src/_includes/**/*.js',
 							'app/scripts/src/**/*.js'
 						]),
@@ -68,6 +69,7 @@ gulp.task('scripts', function() {
 		//this is where our dev JS scripts are
 		return gulp.src([
 							'node_modules/jquery/dist/jquery.js',
+							'node_modules/fullpage.js/dist/jquery.fullpage.js',
 							'app/scripts/src/_includes/**/*.js',
 							'app/scripts/src/**/*.js'
 						])
@@ -88,6 +90,7 @@ gulp.task('scripts-deploy', function() {
 		//this is where our dev JS scripts are
 		return gulp.src([
 							'node_modules/jquery/dist/jquery.js',
+							'node_modules/fullpage.js/dist/jquery.fullpage.js',
 							'app/scripts/src/_includes/**/*.js',
 							'app/scripts/src/**/*.js'
 						])
