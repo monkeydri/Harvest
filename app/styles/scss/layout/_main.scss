@@ -1,10 +1,8 @@
+@import "./flex";
 
 body
 {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: stretch;
+	@extend flexbox-vt-ytop-xstretch;
 }
 
 $navbar-height: 70px;
@@ -18,17 +16,11 @@ header
 	z-index: 9;
 	height: $navbar-height;
 
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: stretch;
+	@extend flexbox-hz-xleft-ystretch;
 
 	.logo-link
 	{
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
+		@extend flexbox-hz-xleft-ycenter;
 
 		padding-right: 15px;
 		text-decoration: none;
@@ -53,10 +45,7 @@ header
 
 	#menu
 	{
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
+		@extend flexbox-hz-xleft-ycenter;
 
 		a
 		{
@@ -87,10 +76,7 @@ header
 
 section
 {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+	@extend flexbox-vt-ytop-xcenter;
 }
 
 footer

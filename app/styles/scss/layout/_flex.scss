@@ -1,0 +1,236 @@
+.flexbox-hz
+{
+	display: flex;
+	flex-direction: row;
+}
+
+// for .flexbox-hz : children spread from left to right and stretched from top to bottom
+.flexbox-hz-xspread-ystretch
+{
+	@extend .flexbox-hz;
+
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+// for .flexbox-hz : children spread from left to right and verticaly centered
+.flexbox-hz-xspread-ycenter
+{
+	@extend .flexbox-hz;
+
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flexbox-hz-xspace-ycenter
+{
+	@extend .flexbox-hz;
+
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+
+// for .flexbox-hz : children spread from left to right and stacked from top
+.flexbox-hz-xspread-ytop
+{
+	@extend .flexbox-hz;
+
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+// for .flexbox-hz : children spread from left to right with margin and stacked from top
+.flexbox-hz-xspace-ytop
+{
+	@extend .flexbox-hz;
+
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.flexbox-hz-xspace-ystretch
+{
+	@extend .flexbox-hz;
+
+	justify-content: space-evenly;
+	align-items: stretch;
+}
+
+// for .flexbox-hz : children horizontaly centered and stretched from top to bottom
+.flexbox-hz-xcenter-ystretch
+{
+	@extend .flexbox-hz;
+
+	justify-content: center;
+	align-items: stretch;
+}
+
+// for .flexbox-hz : children horizontaly centered and verticaly centered
+.flexbox-hz-xcenter-ycenter
+{
+	@extend .flexbox-hz;
+
+	justify-content: center;
+	align-items: center;
+}
+
+// for .flexbox-hz : children horizontaly centered and stacked from top
+.flexbox-hz-xcenter-ytop
+{
+	@extend .flexbox-hz;
+
+	justify-content: center;
+	align-items: flex-start;
+}
+
+// for .flexbox-hz : children stacked from left and stretched from top to bottom
+.flexbox-hz-xleft-ystretch
+{
+	@extend .flexbox-hz;
+
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+// for .flexbox-hz : children stacked from left and verticaly centered
+.flexbox-hz-xleft-ycenter
+{
+	@extend .flexbox-hz;
+
+	justify-content: flex-start;
+	align-items: center;
+}
+
+// for .flexbox-hz : children stacked from left and stacked from top
+.flexbox-hz-xleft-ytop
+{
+	@extend .flexbox-hz;
+
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.flexbox-vt
+{
+	display: flex;
+	flex-direction: column;
+}
+
+// for .flexbox-vt : children spread from top to bottom and stretched from left to right
+.flexbox-vt-yspread-xstretch
+{
+	@extend .flexbox-vt;
+
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+// for .flexbox-vt : children spread from top to bottom and horizontaly centered
+.flexbox-vt-yspread-xcenter
+{
+	@extend .flexbox-vt;
+
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flexbox-vt-yspace-xcenter
+{
+	@extend .flexbox-vt;
+
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.flexbox-vt-yspace-xstretch
+{
+	@extend .flexbox-vt;
+
+	justify-content: space-evenly;
+	align-items: stretch;
+}
+
+// for .flexbox-vt : children spread from top to bottom and stacked from left
+.flexbox-vt-yspread-xleft
+{
+	@extend .flexbox-vt;
+
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+// for .flexbox-vt : children verticaly centered and stretched from left to right
+.flexbox-vt-ycenter-xstretch
+{
+	@extend .flexbox-vt;
+
+	justify-content: center;
+	align-items: stretch;
+}
+
+// for .flexbox-vt : children verticaly centered and horizontaly centered
+.flexbox-vt-ycenter-xcenter
+{
+	@extend .flexbox-vt;
+
+	justify-content: center;
+	align-items: center;
+}
+
+// for .flexbox-vt : children verticaly centered and stacked from left
+.flexbox-vt-ycenter-xleft
+{
+	@extend .flexbox-vt;
+
+	justify-content: center;
+	align-items: flex-start;
+}
+
+// for .flexbox-vt : children stacked from top and stretched from left to right
+.flexbox-vt-ytop-xstretch
+{
+	@extend .flexbox-vt;
+
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+// for .flexbox-vt : children stacked from top and horizontaly centered
+.flexbox-vt-ytop-xcenter
+{
+	@extend .flexbox-vt;
+
+	justify-content: flex-start;
+	align-items: center;
+}
+
+// for .flexbox-vt : children stacked from top and stacked from left
+.flexbox-vt-ytop-xleft
+{
+	@extend .flexbox-vt;
+
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.flexbox-vt-ybottom-xstretch
+{
+	@extend .flexbox-vt;
+
+	justify-content: flex-end;
+	align-items: stretch;
+}
+
+//
+
+.flex-grow
+{
+	flex-grow: 1;
+}
+
+
+.flex-side
+{
+	flex: 1;
+}
