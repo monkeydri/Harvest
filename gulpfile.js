@@ -53,7 +53,11 @@ gulp.task('images-deploy', function() {
 //debugging javascript uglifying
 gulp.task('uglify-error-debugging', function (cb) {
 	pump([
-		gulp.src(['app/scripts/src/_includes/**/*.js', 'app/scripts/src/**/*.js']),
+		gulp.src([
+							'node_modules/jquery/dist/jquery.js',
+							'app/scripts/src/_includes/**/*.js',
+							'app/scripts/src/**/*.js'
+						]),
 		uglify(),
 		gulp.dest('./dist/')
 	], cb);
@@ -62,31 +66,39 @@ gulp.task('uglify-error-debugging', function (cb) {
 //compiling our Javascripts
 gulp.task('scripts', function() {
 		//this is where our dev JS scripts are
-		return gulp.src(['app/scripts/src/_includes/**/*.js', 'app/scripts/src/**/*.js'])
-								//prevent pipe breaking caused by errors from gulp plugins
-								.pipe(plumber())
-								//this is the filename of the compressed version of our JS
-								.pipe(concat('app.js'))
-								//catch errors
-								.on('error', gutil.log)
-								//where we will store our finalized, compressed script
-								.pipe(gulp.dest('app/scripts'))
-								//notify browserSync to refresh
-								.pipe(browserSync.reload({stream: true}));
+		return gulp.src([
+							'node_modules/jquery/dist/jquery.js',
+							'app/scripts/src/_includes/**/*.js',
+							'app/scripts/src/**/*.js'
+						])
+							//prevent pipe breaking caused by errors from gulp plugins
+							.pipe(plumber())
+							//this is the filename of the compressed version of our JS
+							.pipe(concat('app.js'))
+							//catch errors
+							.on('error', gutil.log)
+							//where we will store our finalized, compressed script
+							.pipe(gulp.dest('app/scripts'))
+							//notify browserSync to refresh
+							.pipe(browserSync.reload({stream: true}));
 });
 
 //compiling our Javascripts for deployment
 gulp.task('scripts-deploy', function() {
 		//this is where our dev JS scripts are
-		return gulp.src(['app/scripts/src/_includes/**/*.js', 'app/scripts/src/**/*.js'])
-								//prevent pipe breaking caused by errors from gulp plugins
-								.pipe(plumber())
-								//this is the filename of the compressed version of our JS
-								.pipe(concat('app.js'))
-								//compress :D
-								.pipe(uglify())
-								//where we will store our finalized, compressed script
-								.pipe(gulp.dest('dist/scripts'));
+		return gulp.src([
+							'node_modules/jquery/dist/jquery.js',
+							'app/scripts/src/_includes/**/*.js',
+							'app/scripts/src/**/*.js'
+						])
+							//prevent pipe breaking caused by errors from gulp plugins
+							.pipe(plumber())
+							//this is the filename of the compressed version of our JS
+							.pipe(concat('app.js'))
+							//compress :D
+							.pipe(uglify())
+							//where we will store our finalized, compressed script
+							.pipe(gulp.dest('dist/scripts'));
 });
 
 //compiling our SCSS files
