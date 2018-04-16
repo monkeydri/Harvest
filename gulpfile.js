@@ -1,5 +1,5 @@
 //initialize all of our variables
-var app, base, concat, directory, gulp, gutil, hostname, path, refresh, sass, uglify, imagemin, minifyCSS, del, browserSync, autoprefixer, gulpSequence, shell, sourceMaps, plumber;
+var app, base, concat, directory, gulp, gutil, hostname, path, refresh, sass, uglify, imagemin, minifyCSS, del, browserSync, autoprefixer, gulpSequence, shell, sourceMaps, plumber, pump;
 
 var autoPrefixBrowserList = ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'];
 
@@ -18,6 +18,7 @@ autoprefixer = require('gulp-autoprefixer');
 gulpSequence = require('gulp-sequence').use(gulp);
 shell       = require('gulp-shell');
 plumber     = require('gulp-plumber');
+pump        = require('pump');
 
 gulp.task('browserSync', function() {
 		browserSync({
@@ -47,6 +48,15 @@ gulp.task('images-deploy', function() {
 				//prevent pipe breaking caused by errors from gulp plugins
 				.pipe(plumber())
 				.pipe(gulp.dest('dist/images'));
+});
+
+//debugging javascript uglifying
+gulp.task('uglify-error-debugging', function (cb) {
+	pump([
+		gulp.src(['app/scripts/src/_includes/**/*.js', 'app/scripts/src/**/*.js']),
+		uglify(),
+		gulp.dest('./dist/')
+	], cb);
 });
 
 //compiling our Javascripts
