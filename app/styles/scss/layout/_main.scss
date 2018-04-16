@@ -5,8 +5,35 @@ body
 	@extend .flexbox-vt-ytop-xstretch;
 }
 
+.picto
+{
+	img
+	{
+		display: none;
+	}
+
+	img.no-svg
+	{
+		display: block;
+	}
+}
+
 $navbar-height: 70px;
 $footer-height: 25px;
+$logo-padding: 5px;
+
+.logo-link
+{
+	@extend .flexbox-hz-xleft-ycenter;
+
+	text-decoration: none;
+
+	span
+	{
+		font-size: 30px;
+		font-weight: 900;
+	}
+}
 
 header
 {
@@ -20,27 +47,17 @@ header
 
 	.logo-link
 	{
-		@extend .flexbox-hz-xleft-ycenter;
-
 		padding-right: 15px;
-		text-decoration: none;
 
-		.picto
+		#logo
 		{
-			padding: 5px;
-			width: $navbar-height;
-			height: $navbar-height;
-
-			img
-			{
-				margin: 5px;
-			}
+			width: $navbar-height - ($logo-padding * 2);
+			height: $navbar-height - ($logo-padding * 2);
+			margin: 0 $logo-padding;
 		}
 
 		span
 		{
-			font-size: 30px;
-			font-weight: 900;
 		}
 	}
 

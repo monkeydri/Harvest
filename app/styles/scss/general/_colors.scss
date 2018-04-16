@@ -1,0 +1,64 @@
+$logo-color: white;
+$body-color: grey;
+$navbar-color: rgba(255,255,255,0.6);
+$navbar-text-color: black;
+$navbar-text-hover-color: yellow;
+$navbar-text-active-color: white;
+$navbar-phone-color: orange;
+$footer-color: darkslateblue;
+$footer-text-color: white;
+
+body
+{
+	background-color: $body-color;
+}
+
+
+.logo-link
+{
+	svg
+	{
+		fill: $logo-color;
+	}
+
+	span
+	{
+		color: $logo-color;
+	}
+}
+
+header
+{
+	color: $navbar-text-color;
+
+	a
+	{
+		color: inherit;
+	}
+
+	a:hover
+	{
+		color: $navbar-text-hover-color;
+	}
+
+	a.active
+	{
+		color: $navbar-text-active-color;
+	}
+}
+
+.phone-link
+{
+	color: $navbar-phone-color;
+}
+
+#navbar-background
+{
+	background-color: $navbar-color;
+}
+
+footer
+{
+	color: $footer-text-color;
+	background-color: $footer-color;
+}
