@@ -1,0 +1,19 @@
+@font-face
+{
+	font-family: 'Proxima-Nova-Regular';
+	src: url('../fonts/Proxima-Nova-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html,
+body
+{
+	font-family: 'Proxima-Nova-Regular';
+}
+
+// fix em element after CSS reset
+em
+{
+	font-style: italic;
+}
