@@ -8,6 +8,7 @@ body
 }
 
 $navbar-height: 70px;
+$footer-height: 25px;
 
 header
 {
@@ -15,9 +16,6 @@ header
 	top: 0;
 	width: 100%;
 	z-index: 9;
-	// text-align:center;
-	// color: #f2f2f2;
-
 	height: $navbar-height;
 
 	display: flex;
@@ -93,4 +91,9 @@ section
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+}
+
+footer
+{
+	height: $footer-height;
 }
